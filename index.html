@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>ДЗ 12</title>
+	<link rel="stylesheet" href="css/zero-style.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
+	<script type="text/javascript" src="js/tmpl.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+	
+	<h1>Some title</h1>
+	<div class="slider_wrapper">
+	
+			<div class="carousel-arrow-left"></div>
+			<div class="carousel-hider">
+	
+			<ul class="carousel-list">
+				<li class="carousel-element"><img src="img/pic1.jpg"><p>Описание 1</p></li>
+				<li class="carousel-element"><img src="img/pic2.jpg"><p>Описание 2</p></li>
+				<li class="carousel-element"><img src="img/pic3.jpg"><p>Описание 3</p></li>
+				<li class="carousel-element"><img src="img/pic4.jpg"><p>Описание 4</p></li>
+				<li class="carousel-element"><img src="img/pic5.jpg"><p>Описание 5</p></li>
+				<li class="carousel-element"><img src="img/pic6.jpg"><p>Описание 6</p></li>
+				<li class="carousel-element"><img src="img/pic7.jpg"><p>Описание 7</p></li>
+				<li class="carousel-element"><img src="img/pic8.jpg"><p>Описание 8</p></li>
+				<li class="carousel-element"><img src="img/pic9.jpg"><p>Описание 9</p></li>
+				<li class="carousel-element"><img src="img/pic10.jpg"><p>Описание 10</p></li>
+				<li class="carousel-element"><img src="img/pic11.jpg"><p>Описание 11</p></li>
+				<li class="carousel-element"><img src="img/pic12.jpg"><p>Описание 12</p></li>
+				<li class="carousel-element"><img src="img/pic13.jpg"><p>Описание 13</p></li>
+				<li class="carousel-element"><img src="img/pic14.jpg"><p>Описание 14</p></li>
+			</ul>
+			
+		</div>
+		<div class="carousel-arrow-right"></div>	
+	
+	
+	</div>
+	
+		
+	
+	<div class="anketa_wrapper">
+		
+	<script type="text/template" id="anketaTempl">
+	
+	
+		<div class = "razdel">
+		  <h2><%= fio %> </h2>
+		 
+		<img src="<%= pic %>" alt="Это мое фото" title="Фото">
+		<h4><%= job %></h4>
+		</div>
+		
+		<div class="razdel">
+		  <h4>Хочу учить фронтэнд, потому что:</h4>
+		  <ul>
+			<% for (var i=0; i < 3; i++){ %>
+			<li><%= why[i] %></li><% };%>
+		  </ul>
+		</div>
+		<div class="razdel">
+		 <h4>Контакты</h4>
+		  <p>Мой контактный телефон: <%= tel %></p>
+		  <p>Мой профиль ВКонтакте: 
+	 	  <a href="https://vk.com/maximova.olga">vk.com</a>
+		</div>
+	
+		<div class="razdel">
+		  <h4>Мой фидбек:</h4>
+		  <p><%= feedback %></p>
+		</div>
+	</script>
+	
+	</div>	
+
+	
+	
+</body>
+</html>
+

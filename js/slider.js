@@ -19,14 +19,21 @@
         if (currentLeftValue != maximumOffset) {
             currentLeftValue += pixelsOffset;
             elementsList.animate({ left : currentLeftValue + "px"}, 500);
-        }        
+        }; 
+
     });
  
     rightUIEl.click(function() {        
         if (currentLeftValue != minimumOffset) {
             currentLeftValue -= pixelsOffset;
             elementsList.animate({ left : currentLeftValue + "px"}, 500);
-        }        
+        };
+		
+		if (currentLeftValue < (minimumOffset+pixelsOffset*4)){
+			currentLeftValue = 0;
+			elementsList.animate({ left : currentLeftValue + "px"}, 500);
+		};
+			
     });
 	
 	return this;
